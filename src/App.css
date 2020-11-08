@@ -2,6 +2,38 @@
   text-align: center;
 }
 
+.title {
+  color:black;
+  font-style: oblique;
+  font-weight: bolder;
+  font-family: 'comic sans ms';
+  font-size: 3rem;
+  margin-bottom: 4em;
+}
+
+.firstTemp {
+  font-family: 'comic sans ms';
+  font-size: 40px;
+}
+
+.icon {
+  width: 70%;
+  height: auto;
+  margin-top: -4em;
+}
+
+.modal{
+margin-bottom: 5em;
+}
+
+.form{
+  background-color: transparent;
+  margin-top: 2em;
+}
+::placeholder {
+  color: black;
+  opacity: 50%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,7 +53,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
 .App-link {

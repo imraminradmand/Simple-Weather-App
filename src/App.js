@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import icon from './icon.svg'
+
 
 class App extends Component {
 
@@ -54,12 +56,13 @@ class App extends Component {
     const iconUrl = `https://openweathermap.org/img/w/${this.state.icon}.png`
   return (
       <div className="App">
-        <h1>My Weather App</h1>
+        <h1 className='title'>My Weather App</h1>
+        <img className='icon' src={icon}/>
         <div className='row'>
           <div className=' col s6 offset-s3'>
-          <h1> {this.state.temp} °C</h1>
+          <h1 className='firstTemp'> {this.state.temp} °C</h1>
           <a className="waves-effect waves-light btn modal-trigger" href="#modal1">More Info</a>
-          <form onSubmit={this.searchCity}>
+          <form className='form'onSubmit={this.searchCity}>
             <input type='text' id='city' placeholder='London' />
           </form>
         </div>
@@ -72,7 +75,7 @@ class App extends Component {
             <p>{this.state.weather} <img src={iconUrl}/></p>
           </div>
           <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Agree</a>
+            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
           </div>
         </div>
       </div>
