@@ -30,9 +30,14 @@ margin-bottom: 5em;
   background-color: transparent;
   margin-top: 2em;
 }
+
+.button {
+  background-color: transparent;
+  border-radius: 0%;
+}
 ::placeholder {
   color: black;
-  opacity: 50%;
+  
 }
 .App-logo {
   height: 40vmin;

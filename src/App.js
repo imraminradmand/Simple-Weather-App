@@ -63,7 +63,8 @@ class App extends Component {
           <h1 className='firstTemp'> {this.state.temp} °C</h1>
           <a className="waves-effect waves-light btn modal-trigger" href="#modal1">More Info</a>
           <form className='form'onSubmit={this.searchCity}>
-            <input type='text' id='city' placeholder='London' />
+            <input type='text' id='city' placeholder='London' /> 
+            <button className='button'>Search</button>
           </form>
         </div>
         </div>
