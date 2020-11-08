@@ -5,7 +5,8 @@ import axios from 'axios';
 import icon from './icon.svg'
 import TextField from '@material-ui/core/TextField'
 import { Button } from '@material-ui/core';
-
+import Headers from './Headers';
+import Modal from './Modal'
 
 
 class App extends Component {
@@ -57,27 +58,18 @@ class App extends Component {
         <img className='icon' src={icon}/>
         <div className='row'>
           <div className=' col s6 offset-s3'>
-          <h1 className='firstTemp'> {this.state.temp} °C</h1>
-          <a className="waves-effect waves-light btn modal-trigger" href="#modal1">More Info</a>
-          <div className='form'>
-          <form onSubmit={this.searchCity}>
-            <input className='text' type='text' id='city' placeholder='London' />
-            <Button onClick={this.searchCity}>Search</Button>
-          </form>
+            <Headers temp={this.state.temp}  />
+            <a className="waves-effect waves-light btn modal-trigger" href="#modal1">More Info</a>
+            <div className='form'>
+              <form onSubmit={this.searchCity}>
+                <input className='text' type='text' id='city' placeholder='London' />
+                <Button onClick={this.searchCity}>Search</Button>
+              </form>
+            </div>
           </div>
         </div>
-        </div>
-
-        <div id="modal1" className="modal">
-          <div className="modal-content">
-            <h4>{this.state.cityName}</h4>
-            <p>High: {this.state.high} °C - Low: {this.state.low} °C</p>
-            <p>{this.state.weather} <img src={iconUrl}/></p>
-          </div>
-          <div className="modal-footer">
-            <a href="#!" className="modal-close waves-effect waves-green btn-flat">Close</a>
-          </div>
-        </div>
+        <Modal iconUrl={iconUrl} weather={this.state.weather} 
+        cityName={this.state.cityName} low={this.state.low} high={this.state.high}/>
       </div>
     );
   }
