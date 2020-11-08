@@ -23,17 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=381e045e4c2c96594b3f565f73e49cbb`
-    axios.get(url).then((resp)=>{
-      this.setState({
-        temp: resp.data.main.temp,
-        high: resp.data.main.temp_max,
-        low: resp.data.main.temp_min,
-        weather: resp.data.weather[0].description,
-        icon: resp.data.weather[0].icon,
-        cityName: resp.data.name
-      })
-    })
+    this.getCityWeather('London')
     var elems = document.querySelectorAll('.modal');
     var instances = window.M.Modal.init(elems);
   }
@@ -41,6 +31,10 @@ class App extends Component {
   searchCity = (e) =>{
     e.preventDefault();
     const city = document.getElementById('city').value
+    this.getCityWeather(city)
+  }
+
+  getCityWeather = (city) => {
     console.log(city)
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=381e045e4c2c96594b3f565f73e49cbb`
     axios.get(url).then((resp)=>{
