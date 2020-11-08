@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import icon from './icon.svg'
+import TextField from '@material-ui/core/TextField'
+import { Button } from '@material-ui/core';
+
 
 
 class App extends Component {
@@ -62,10 +65,12 @@ class App extends Component {
           <div className=' col s6 offset-s3'>
           <h1 className='firstTemp'> {this.state.temp} °C</h1>
           <a className="waves-effect waves-light btn modal-trigger" href="#modal1">More Info</a>
-          <form className='form'onSubmit={this.searchCity}>
-            <input type='text' id='city' placeholder='London' /> 
-            <button className='button'>Search</button>
+          <div className='form'>
+          <form onSubmit={this.searchCity}>
+            <input className='text' type='text' id='city' placeholder='London' />
+            <Button onClick={this.searchCity}>Search</Button>
           </form>
+          </div>
         </div>
         </div>
 

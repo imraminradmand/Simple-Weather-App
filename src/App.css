@@ -23,17 +23,11 @@
 }
 
 .modal{
-margin-bottom: 5em;
+margin-bottom: 10%;
 }
 
-.form{
+.text {
   background-color: transparent;
-  margin-top: 2em;
-}
-
-.button {
-  background-color: transparent;
-  border-radius: 0%;
 }
 ::placeholder {
   color: black;
