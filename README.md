@@ -1,7 +1,6 @@
 
 # Simple-Weather-App
 
-Out of boredom decided to make a simple weather app.
 Just like any other weather app out there it does the very basic task of searching for a city and grabbing the weather.
 On the main screen it will show you the current temperature, if you want to know more about the location's weather you simply click on "More Info".
 More info will provide you with the Hi and the Low of that location, and will also tell you the current sky conditions.
