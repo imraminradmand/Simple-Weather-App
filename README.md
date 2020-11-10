@@ -6,7 +6,7 @@ On the main screen it will show you the current temperature, if you want to know
 More info will provide you with the Hi and the Low of that location, and will also tell you the current sky conditions.
 
 ## The app can be found at: 
-tellmetheweathernow.herokuapp.com 
+https://tellmetheweathernow.herokuapp.com 
 
 * Please note, this has been mostly optimized to look good on iPhone X screens and above, once I have some more time I will correct it to perform better on all other devices
 
